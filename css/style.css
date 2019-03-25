@@ -1,149 +1,129 @@
-html, body{
-	margin:0;
+@font-face{
+	font-family: "Open Sans";
+	src: url("../font/OpenSans-Bold.ttf"),
+		url("../font/OpenSans-BoldItalic.ttf"),
+		url("../font/OpenSans-ExtraBold.ttf"),
+		url("../font/OpenSans-ExtraBoldItalic.ttf"),
+		url("../font/OpenSans-Italic.ttf"),
+		url("../font/OpenSans-Light.ttf"),
+		url("../font/OpenSans-LightItalic.ttf"),
+		url("../font/OpenSans-Regular.ttf"),
+		url("../font/OpenSans-Semibold.ttf"),
+		url("../font/"OpenSans-SemiboldItalic.ttf);
+}
+@font-face{
+	font-family: "Bebas";
+	src:url("../font/BebasNeue Regular.otf"),
+		url("../font/BebasNeue Thin.otf"),
+		url("../font/BebasNeue Light.otf"),
+		url("../font/BebasNeue Book.otf"),
+		url("../font/BebasNeue Bold.otf");
+}
+@font-face{
+	font-family: "Nobile";
+	src:url("../font/Nobile-Regular.ttf"),
+		url("../font/Nobile-Regular.ttf"),
+		url("../font/Nobile-MediumItalic.ttf"),
+		url("../font/Nobile-Italic.ttf"),
+		url("../font/Nobile-BoldItalic.ttf"),
+		url("../font/Nobile-Bold.ttf");
+}
+body{
 	width: 100%;
-	font-family: Arial, san-serif;
-}
-main{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-header{
-	height: 200px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: Arial, sans-serif;
-	background: #333;
-}
-h1{
-	margin: 0;
-
-	color: #fff;
-}
-h3{
-	margin: 15px 0 0;
-	font-size: 16px;
-}
-.head_txt{
-	padding: 5px;
-	margin: 5px auto;
-	border: 3px solid #404040;
-	color: #fff;
-}
-.column_info{
-	width: 250px;
-	padding:0 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	
-	background: #909090;
-}
-img{	
-	border-radius: 50%;
-	margin-top: 30px;
-}
-table{
-	margin-top: 30px;
-	border-collapse: collapse;
-	font-size: 14px;
-}
-th{
-	padding-bottom: 15px;
-	font-size: 18px;
-	text-transform: uppercase;
-}
-td{
-	padding: 5px 0;
-	border-bottom: 1px solid #333;
-}
-tr td:first-child{
-	width: 120px;
-	font-weight: bold;
-
-}
-ul{
-	list-style: none;
-	font-size: 15px;
 	margin: 0;
 	padding: 0;
 }
+.head{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px;
+	background: #333;
+}
+.photo-profile{
+	width: 140px;
+	height: 140px;
+	background: #fff;
+	border-radius: 50%;
+	border:4px solid #fff;
+	position: relative;
+	top: 70px;
+	box-shadow: 0 5px 15px 0 #383434;
+}
+.head-txt{
+	font-family: "Nobile", sans-serif;
+	font-size: 0.9em;
+	margin:15px 20px 5px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+}
+.about{
+	font-family: "Bebas", sans-serif;
+	margin:5px 10px;
+	background: #ccc;
+	min-height: 200px;
+	border-radius: 5px;
+}
 .social{
-
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 30px;
+	padding: 60px 20px 10px;
+	
+	list-style: none;
 }
-.social li{
+.social li a {
+	font-size: 28px;
+	color:#b75e10;
+}
+.social li {
+	margin: 5px 5px;
+}
+.txt-about{
+	font-family: "Bebas", sans-serif;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px 20px;
+	color: #b75e10;
+}
+.other-info{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding:  20px;
+}
+.other-info li{
+	list-style: none;
+	font-weight: bold;
+	margin: 0 10px;
+}
+span{
+	font-weight: normal;
+}
+.profesion{
+	min-width:260px;
+	font-family: "Nobile", sans-serif;
 	margin: 10px;
-	width: 40px;
-	height: 30px;
-	background:#333;
-	border-radius: 50%;
+	padding: 20px;
+	background: #ccc;
 }
-.social a{
-	width: 100%;
-	height: 100%;
-	
-	
+.profesion h4, .profesion h5, .profesion p{
+	margin: 5px;
 }
-.column_profile{
-
+.block-2{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	padding:0 50px;
-	background: #f0f0f0;
+	align-items: center;
 }
-h2{
-	font-size: 24px;
-	margin: 30px 0 0;
+.portfolio img{
+	width: 320px;
+	height: 170px;
 }
-.column_profile li{
-	display:flex;
-	flex-direction: column;
-}
-li{
-	margin: 10px 0px;
-	padding:5px 0;
-	
-}
-.list_other{
-	display: flex;
-	flex-direction: row;
-}
-.list_other li {
-	padding: 5px;
-	background: #333;
-	color: #fff;
-	margin: 0px 5px;
-}
-p{
-	width: 500px;
-	font-family: Arial,sans-serif;
-	font-size: 13px;
-	margin: 15px 0 0;
-
-}
-a{
-	text-decoration: none;	color: #fff;
-}
-.profesion{
-	font-weight: bold;
-}
-.profesion:after{
-	content: "";
-	font-size: 0;
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-	background: #fff;
-	top: -10px;
-	left: -20px;
+footer{
+	background: #ccc;
+	padding: 20px;
 }
